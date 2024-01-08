@@ -17,12 +17,17 @@ import { computed } from 'vue';
 const props = defineProps<{
   text: string;
   color?: 'primary' | 'secondary' | 'success' | 'danger' | 'warning' | 'info' | 'dark';
+  rounded?: boolean;
 }>();
 
 const emit = defineEmits(['click']);
 
 const computedClass = computed(() => {
   const classes = [];
+
+  if (props.rounded) {
+    classes.push('rounded-full');
+  }
 
   switch (props.color) {
     case undefined:
@@ -101,9 +106,9 @@ const computedClass = computed(() => {
         'focus:ring-gray-300',
         'dark:text-black',
         'dark:bg-white',
-        'dark:hover:bg-white',
+        'dark:hover:bg-gray-200',
         'dark:focus:ring-1',
-        'dark:focus:ring-white'
+        'dark:focus:ring-gray-200'
       );
       break;
   }
