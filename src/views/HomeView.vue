@@ -1,13 +1,16 @@
 <template>
-  <div
-    @click="toggleUiMode"
-    class="w-fit rounded-lg shadow-md m-3 p-3 cursor-pointer bg-red-300 dark:bg-red-700"
-  >
-    Toggle UI
-  </div>
-  <div class="grid grid-cols-5 gap-3 mx-auto m-3 p-3 h-auto">
+  <div class="mx-auto m-3 p-3 h-auto">
+    <button-component text="Toggle UI" color="secondary" @click="toggleUiMode" />
     <card-component title="a">ickkcki2p2ai</card-component>
-    <button-component title="qwertyuiopasdfghjklñzxcvbnm" />
+    <div class="grid grid-cols-7 gap-3">
+      <button-component text="no color" />
+      <button-component text="primary" color="primary" />
+      <button-component text="secondary" color="secondary" />
+      <button-component text="success" color="success" />
+      <button-component text="danger" color="danger" />
+      <button-component text="warning" color="warning" />
+      <button-component text="info" color="info" />
+    </div>
   </div>
 </template>
 
