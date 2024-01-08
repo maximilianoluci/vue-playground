@@ -2,7 +2,7 @@
   <div>
     <button
       type="button"
-      class="text-white font-medium rounded-lg text-sm px-5 py-2.5 m-3 focus:outline-none"
+      class="text-white font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 focus:outline-none"
       :class="computedClass"
       @click="onClick"
     >
@@ -12,17 +12,17 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue'
+import { computed } from 'vue';
 
 const props = defineProps<{
-  text: string
-  color?: 'primary' | 'secondary' | 'success' | 'danger' | 'warning' | 'info' | 'dark'
-}>()
+  text: string;
+  color?: 'primary' | 'secondary' | 'success' | 'danger' | 'warning' | 'info' | 'dark';
+}>();
 
-const emit = defineEmits(['click'])
+const emit = defineEmits(['click']);
 
 const computedClass = computed(() => {
-  const classes = []
+  const classes = [];
 
   switch (props.color) {
     case undefined:
@@ -36,8 +36,8 @@ const computedClass = computed(() => {
         'dark:bg-blue-600',
         'dark:hover:bg-blue-700',
         'dark:focus:ring-blue-800'
-      )
-      break
+      );
+      break;
     case 'secondary':
       classes.push(
         'bg-gray-500',
@@ -47,8 +47,8 @@ const computedClass = computed(() => {
         'dark:bg-gray-600',
         'dark:hover:bg-gray-700',
         'dark:focus:ring-gray-800'
-      )
-      break
+      );
+      break;
     case 'success':
       classes.push(
         'bg-green-500',
@@ -58,8 +58,8 @@ const computedClass = computed(() => {
         'dark:bg-green-600',
         'dark:hover:bg-green-700',
         'dark:focus:ring-green-800'
-      )
-      break
+      );
+      break;
     case 'danger':
       classes.push(
         'bg-red-500',
@@ -69,8 +69,8 @@ const computedClass = computed(() => {
         'dark:bg-red-600',
         'dark:hover:bg-red-700',
         'dark:focus:ring-red-800'
-      )
-      break
+      );
+      break;
     case 'warning':
       classes.push(
         'bg-yellow-500',
@@ -80,8 +80,8 @@ const computedClass = computed(() => {
         'dark:bg-yellow-600',
         'dark:hover:bg-yellow-700',
         'dark:focus:ring-yellow-800'
-      )
-      break
+      );
+      break;
     case 'info':
       classes.push(
         'bg-cyan-500',
@@ -91,8 +91,8 @@ const computedClass = computed(() => {
         'dark:bg-cyan-600',
         'dark:hover:bg-cyan-700',
         'dark:focus:ring-cyan-800'
-      )
-      break
+      );
+      break;
     case 'dark':
       classes.push(
         'bg-gray-500',
@@ -104,14 +104,14 @@ const computedClass = computed(() => {
         'dark:hover:bg-white',
         'dark:focus:ring-1',
         'dark:focus:ring-white'
-      )
-      break
+      );
+      break;
   }
 
-  return classes.join(' ').trim()
-})
+  return classes.join(' ').trim();
+});
 
 function onClick() {
-  emit('click')
+  emit('click');
 }
 </script>
