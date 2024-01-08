@@ -16,7 +16,7 @@ import { computed } from 'vue'
 
 const props = defineProps<{
   text: string
-  color?: 'primary' | 'secondary' | 'success' | 'danger' | 'warning' | 'info'
+  color?: 'primary' | 'secondary' | 'success' | 'danger' | 'warning' | 'info' | 'dark'
 }>()
 
 const emit = defineEmits(['click'])
@@ -91,6 +91,19 @@ const computedClass = computed(() => {
         'dark:bg-cyan-600',
         'dark:hover:bg-cyan-700',
         'dark:focus:ring-cyan-800'
+      )
+      break
+    case 'dark':
+      classes.push(
+        'bg-gray-500',
+        'hover:bg-gray-800',
+        'focus:ring-1',
+        'focus:ring-gray-300',
+        'dark:text-black',
+        'dark:bg-white',
+        'dark:hover:bg-white',
+        'dark:focus:ring-1',
+        'dark:focus:ring-white'
       )
       break
   }

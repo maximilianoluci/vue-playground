@@ -1,6 +1,6 @@
 <template>
-  <div class="mx-auto m-3 p-3 h-auto">
-    <button-component text="Toggle UI" color="secondary" @click="toggleUiMode" />
+  <div class="mx-auto p-3 h-auto">
+    <button-component text="Toggle UI" color="dark" @click="toggleUiMode" />
     <card-component title="a">ickkcki2p2ai</card-component>
     <div class="grid grid-cols-7 gap-3">
       <button-component text="no color" />
