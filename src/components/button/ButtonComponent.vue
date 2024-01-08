@@ -1,14 +1,14 @@
 <template>
-  <div>
-    <button
-      type="button"
-      class="text-white font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 focus:outline-none"
-      :class="computedClass"
-      @click="onClick"
-    >
-      {{ text }}
-    </button>
-  </div>
+  <button
+    type="button"
+    class="text-white font-medium rounded-lg text-center focus:ring-1"
+    :class="computedClass"
+    @click="onClick"
+  >
+    <div class="flex items-center justify-center">
+      <span v-if="text">{{ text }}</span>
+    </div>
+  </button>
 </template>
 
 <script setup lang="ts">
@@ -18,6 +18,7 @@ const props = defineProps<{
   text: string;
   color?: 'primary' | 'secondary' | 'success' | 'danger' | 'warning' | 'info' | 'dark';
   rounded?: boolean;
+  size?: 'xs' | 'sm' | 'base' | 'lg' | 'xl';
 }>();
 
 const emit = defineEmits(['click']);
@@ -25,9 +26,7 @@ const emit = defineEmits(['click']);
 const computedClass = computed(() => {
   const classes = [];
 
-  if (props.rounded) {
-    classes.push('rounded-full');
-  }
+  classes.push(props.rounded ? 'rounded-full' : '');
 
   switch (props.color) {
     case undefined:
@@ -36,7 +35,6 @@ const computedClass = computed(() => {
       classes.push(
         'bg-blue-500',
         'hover:bg-blue-800',
-        'focus:ring-1',
         'focus:ring-blue-300',
         'dark:bg-blue-600',
         'dark:hover:bg-blue-700',
@@ -47,7 +45,6 @@ const computedClass = computed(() => {
       classes.push(
         'bg-gray-500',
         'hover:bg-gray-800',
-        'focus:ring-1',
         'focus:ring-gray-300',
         'dark:bg-gray-600',
         'dark:hover:bg-gray-700',
@@ -58,7 +55,6 @@ const computedClass = computed(() => {
       classes.push(
         'bg-green-500',
         'hover:bg-green-800',
-        'focus:ring-1',
         'focus:ring-green-300',
         'dark:bg-green-600',
         'dark:hover:bg-green-700',
@@ -69,7 +65,6 @@ const computedClass = computed(() => {
       classes.push(
         'bg-red-500',
         'hover:bg-red-800',
-        'focus:ring-1',
         'focus:ring-red-300',
         'dark:bg-red-600',
         'dark:hover:bg-red-700',
@@ -80,7 +75,6 @@ const computedClass = computed(() => {
       classes.push(
         'bg-yellow-500',
         'hover:bg-yellow-800',
-        'focus:ring-1',
         'focus:ring-yellow-300',
         'dark:bg-yellow-600',
         'dark:hover:bg-yellow-700',
@@ -91,7 +85,6 @@ const computedClass = computed(() => {
       classes.push(
         'bg-cyan-500',
         'hover:bg-cyan-800',
-        'focus:ring-1',
         'focus:ring-cyan-300',
         'dark:bg-cyan-600',
         'dark:hover:bg-cyan-700',
@@ -102,7 +95,6 @@ const computedClass = computed(() => {
       classes.push(
         'bg-gray-500',
         'hover:bg-gray-800',
-        'focus:ring-1',
         'focus:ring-gray-300',
         'dark:text-black',
         'dark:bg-white',
@@ -110,6 +102,25 @@ const computedClass = computed(() => {
         'dark:focus:ring-1',
         'dark:focus:ring-gray-200'
       );
+      break;
+  }
+
+  switch (props.size) {
+    case 'xs':
+      classes.push('px-3', 'py-2', 'text-xs');
+      break;
+    case 'sm':
+      classes.push('px-3', 'py-2', 'text-sm');
+      break;
+    case 'lg':
+      classes.push('px-5', 'py-3', 'text-lg');
+      break;
+    case 'xl':
+      classes.push('px-6', 'py-3.5', 'text-xl');
+      break;
+    case 'base':
+    default:
+      classes.push('px-5', 'py-2.5', 'text-base');
       break;
   }
 

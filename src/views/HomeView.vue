@@ -1,6 +1,11 @@
 <template>
-  <div class="mx-auto p-3 h-auto">
-    <button-component text="Toggle Dark/Light Mode" color="dark" @click="toggleUiMode" />
+  <div class="p-3 h-auto">
+    <button-component
+      class="mb-3"
+      text="Toggle Dark/Light Mode"
+      color="dark"
+      @click="toggleUiMode"
+    />
     <div class="grid grid-cols-2 mb-3">
       <card-component title="title" subtitle="subtitle" :hover="true"
         >i am inside your walls</card-component
@@ -9,14 +14,14 @@
         >i am inside your walls</card-component
       >
     </div>
-    <div class="grid grid-cols-7 gap-3">
-      <button-component text="no color" />
-      <button-component text="primary" color="primary" :rounded="true" />
-      <button-component text="secondary" color="secondary" />
-      <button-component text="success" color="success" :rounded="true" />
-      <button-component text="danger" color="danger" />
-      <button-component text="warning" color="warning" :rounded="true" />
-      <button-component text="info" color="info" />
+    <div class="flex-none flex-row grow-0">
+      <button-component class="mr-3" text="no color" size="xs" />
+      <button-component class="mr-3" text="primary" color="primary" size="base" :rounded="true" />
+      <button-component class="mr-3" text="secondary" color="secondary" size="lg" />
+      <button-component class="mr-3" text="success" color="success" size="xl" :rounded="true" />
+      <button-component class="mr-3" text="danger" color="danger" size="lg" />
+      <button-component class="mr-3" text="warning" color="warning" size="base" :rounded="true" />
+      <button-component text="info" color="info" size="xs" />
     </div>
   </div>
 </template>
