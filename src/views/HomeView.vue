@@ -34,12 +34,36 @@
     </div>
     <div class="flex-none flex-row grow-0 mb-3">
       <button-component text="transparent" color="transparent" size="xs" :full-width="true" />
-      <button-component text="primary" color="primary" size="base" :full-width="true" />
-      <button-component text="secondary" color="secondary" size="lg" :full-width="true" />
-      <button-component text="success" color="success" size="xl" :full-width="true" />
-      <button-component text="danger" color="danger" size="lg" :full-width="true" />
-      <button-component text="warning" color="warning" size="base" :full-width="true" />
-      <button-component text="info" color="info" size="xs" :full-width="true" />
+      <button-component
+        text="primary"
+        color="primary"
+        size="base"
+        :full-width="true"
+        :rounded="true"
+      />
+      <button-component
+        text="secondary"
+        color="secondary"
+        size="lg"
+        :full-width="true"
+        :rounded="true"
+      />
+      <button-component
+        text="success"
+        color="success"
+        size="xl"
+        :full-width="true"
+        :rounded="true"
+      />
+      <button-component text="danger" color="danger" size="lg" :full-width="true" :rounded="true" />
+      <button-component
+        text="warning"
+        color="warning"
+        size="base"
+        :full-width="true"
+        :rounded="true"
+      />
+      <button-component text="info" color="info" size="xs" :full-width="true" :rounded="true" />
     </div>
     <div class="flex-none flex-row grow-0 mb-3">
       <button-component

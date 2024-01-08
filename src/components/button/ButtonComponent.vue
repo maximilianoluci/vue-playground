@@ -50,6 +50,7 @@ const computedClass = computed(() => {
     case null:
     case "primary":
       classes.push(
+        "text-white",
         "bg-blue-500",
         "hover:bg-blue-800",
         "focus:ring-blue-300",
@@ -60,6 +61,7 @@ const computedClass = computed(() => {
       break;
     case "secondary":
       classes.push(
+        "text-white",
         "bg-gray-500",
         "hover:bg-gray-800",
         "focus:ring-gray-300",
@@ -70,6 +72,7 @@ const computedClass = computed(() => {
       break;
     case "success":
       classes.push(
+        "text-white",
         "bg-green-500",
         "hover:bg-green-800",
         "focus:ring-green-300",
@@ -80,6 +83,7 @@ const computedClass = computed(() => {
       break;
     case "danger":
       classes.push(
+        "text-white",
         "bg-red-500",
         "hover:bg-red-800",
         "focus:ring-red-300",
@@ -90,6 +94,7 @@ const computedClass = computed(() => {
       break;
     case "warning":
       classes.push(
+        "text-white",
         "bg-yellow-500",
         "hover:bg-yellow-800",
         "focus:ring-yellow-300",
@@ -100,6 +105,7 @@ const computedClass = computed(() => {
       break;
     case "info":
       classes.push(
+        "text-white",
         "bg-cyan-500",
         "hover:bg-cyan-800",
         "focus:ring-cyan-300",
@@ -110,6 +116,7 @@ const computedClass = computed(() => {
       break;
     case "dark":
       classes.push(
+        "text-white",
         "bg-gray-500",
         "hover:bg-gray-800",
         "focus:ring-gray-300",
@@ -121,7 +128,7 @@ const computedClass = computed(() => {
       );
       break;
     case "transparent":
-      classes.push("border", "border-none", "focus:outline-none");
+      classes.push("text-black", "border", "border-none", "focus:outline-none", "dark:text-white");
   }
 
   switch (props.size) {
