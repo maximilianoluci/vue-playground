@@ -19,7 +19,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue';
+import { computed } from "vue";
 
 const props = defineProps<{
   title?: string;
@@ -31,9 +31,9 @@ const computedClass = computed(() => {
   const classes = [];
 
   if (props.hover) {
-    classes.push('hover:bg-gray-100 dark:hover:bg-gray-700');
+    classes.push("hover:bg-gray-100 dark:hover:bg-gray-700");
   }
 
-  return classes.join(' ').trim();
+  return classes.join(" ").trim();
 });
 </script>
