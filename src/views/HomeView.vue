@@ -1,7 +1,14 @@
 <template>
   <div class="p-3 h-auto">
-    <button-component class="" text="Toggle Dark/Light Mode" color="dark" @click="toggleUiMode" />
-    <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" />
+    <div class="flex justify-center">
+      <button-component
+        text="Toggle Dark/Light Mode"
+        color="dark"
+        :full-width="true"
+        @click="toggleUiMode"
+      />
+    </div>
+    <hr class="h-px my-3 bg-gray-200 border-0 dark:bg-gray-700" />
     <div class="grid grid-cols-2">
       <card-component title="title" subtitle="subtitle" :hover="true"
         >i am inside your walls</card-component
@@ -10,8 +17,8 @@
         >i am inside your walls</card-component
       >
     </div>
-    <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" />
-    <div class="max-w-7xl">
+    <hr class="h-px my-3 bg-gray-200 border-0 dark:bg-gray-700" />
+    <div class="flex-none flex-row space-y-3 grow-0 max-w-7xl">
       <input-component
         type="text"
         labelValue="field test"
@@ -25,19 +32,28 @@
         :requiredLabel="false"
       />
     </div>
-    <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" />
+    <hr class="h-px my-3 bg-gray-200 border-0 dark:bg-gray-700" />
     <button-group-component :items="buttonItems" />
-    <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" />
+    <hr class="h-px my-3 bg-gray-200 border-0 dark:bg-gray-700" />
+    <modal-component id="pp" title="abcdefghijklmnñopqrstuvwxyz" label="test"
+      >test test</modal-component
+    >
+    <hr class="h-px my-3 bg-gray-200 border-0 dark:bg-gray-700" />
+    <jumbo-component
+      title="Lorem"
+      subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi a tempus ipsum, nec porta arcu. Phasellus eu commodo purus. Curabitur aliquet metus hendrerit lorem auctor pulvinar. Sed bibendum pulvinar lacinia. Ut iaculis pellentesque varius. Aenean lobortis nisi lobortis, hendrerit nisi nec, consequat dolor. Vivamus ut porttitor dolor. Vivamus mollis turpis urna, sed sollicitudin mi ultricies nec."
+    />
+    <hr class="h-px my-3 bg-gray-200 border-0 dark:bg-gray-700" />
     <div class="flex-none flex-row space-x-3 grow-0">
       <dropdown-component id="dd1" label="peepeepoopoo" :hideCaret="true" :items="dropdownItems" />
       <dropdown-component id="dd2" label="peepeepoopoo" :items="dropdownItems" />
     </div>
-    <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" />
+    <hr class="h-px my-3 bg-gray-200 border-0 dark:bg-gray-700" />
     <div class="flex-none flex-row space-y-3 grow-0">
       <checkbox-component id="cb1" text="text" />
       <checkbox-component id="cb2" text="text" subtitle="subtitle" />
     </div>
-    <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" />
+    <hr class="h-px my-3 bg-gray-200 border-0 dark:bg-gray-700" />
     <div class="grid grid-rows-6 gap-3 max-w-xl">
       <alert-component text="Change a few things up and try submitting again." icon="info-circle" />
       <alert-component text="Change a few things up and try submitting again." color="info" />
@@ -46,7 +62,7 @@
       <alert-component text="Change a few things up and try submitting again." color="warning" />
       <alert-component text="Change a few things up and try submitting again." color="dark" />
     </div>
-    <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" />
+    <hr class="h-px my-3 bg-gray-200 border-0 dark:bg-gray-700" />
     <div class="flex-none flex-row space-x-3 grow-0">
       <button-component text="transparent" color="transparent" size="xs" />
       <button-component text="primary" color="primary" size="base" />
@@ -56,7 +72,7 @@
       <button-component text="warning" color="warning" size="base" />
       <button-component text="info" color="info" size="xs" />
     </div>
-    <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" />
+    <hr class="h-px my-3 bg-gray-200 border-0 dark:bg-gray-700" />
     <div class="flex-none flex-row space-x-3 grow-0">
       <button-component icon="apple" text="transparent" color="transparent" size="xs" />
       <button-component icon="apple" text="primary" color="primary" size="base" />
@@ -66,7 +82,7 @@
       <button-component icon="apple" text="warning" color="warning" size="base" />
       <button-component icon="apple" text="info" color="info" size="xs" />
     </div>
-    <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" />
+    <hr class="h-px my-3 bg-gray-200 border-0 dark:bg-gray-700" />
     <div class="flex-none flex-row space-y-3 grow-0">
       <button-component text="transparent" color="transparent" size="xs" :full-width="true" />
       <button-component text="primary" color="primary" size="base" :full-width="true" />
@@ -76,7 +92,7 @@
       <button-component text="warning" color="warning" size="base" :full-width="true" />
       <button-component text="info" color="info" size="xs" :full-width="true" />
     </div>
-    <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" />
+    <hr class="h-px my-3 bg-gray-200 border-0 dark:bg-gray-700" />
     <div class="flex-none flex-row space-y-3 grow-0">
       <button-component
         icon="apple"
@@ -121,6 +137,8 @@ import AlertComponent from "@/components/alert/AlertComponent.vue";
 import ButtonGroupComponent from "@/components/button/ButtonGroupComponent.vue";
 import DropdownComponent from "@/components/dropdown/DropdownComponent.vue";
 import CheckboxComponent from "@/components/checkbox/CheckboxComponent.vue";
+import ModalComponent from "@/components/modal/ModalComponent.vue";
+import JumboComponent from "@/components/jumbotron/JumboComponent.vue";
 
 let isDarkMode: boolean = false;
 const buttonItems = [
