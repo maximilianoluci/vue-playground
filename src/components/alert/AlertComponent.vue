@@ -1,5 +1,5 @@
 <template>
-  <div class="p-4 text-sm rounded-lg" :class="computedClass" role="alert">
+  <div class="rounded-lg p-4 text-sm" :class="computedClass" role="alert">
     <!-- <svg-icon v-if="icon" :name="icon" /> -->
     <span :class="icon ? 'ml-3' : ''" class="font-medium"
       >{{ color ? initcap(color) : "Default" }} alert!</span

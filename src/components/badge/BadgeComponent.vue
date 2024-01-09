@@ -1,5 +1,5 @@
 <template>
-  <span class="text-xs font-medium me-2 px-2.5 py-0.5 rounded" :class="computedClass">{{
+  <span class="me-2 rounded px-2.5 py-0.5 text-xs font-medium" :class="computedClass">{{
     text
   }}</span>
 </template>

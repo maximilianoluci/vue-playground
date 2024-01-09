@@ -1,7 +1,7 @@
 <template>
   <button
     type="button"
-    class="font-medium rounded-lg text-center focus:ring-1"
+    class="rounded-lg text-center font-medium focus:ring-1"
     :class="computedClass"
     @click="onClick"
   >

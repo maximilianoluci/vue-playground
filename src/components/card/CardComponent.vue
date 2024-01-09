@@ -1,7 +1,7 @@
 <template>
   <div>
     <div
-      class="block relative max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+      class="relative block max-w-sm rounded-lg border border-gray-200 bg-white p-6 shadow dark:border-gray-700 dark:bg-gray-800"
       :class="computedClass"
     >
       <h5

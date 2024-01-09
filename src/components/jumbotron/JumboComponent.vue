@@ -1,25 +1,25 @@
 <template>
-  <section class="bg-white dark:bg-gray-900 rounded-xl">
-    <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16">
+  <section class="rounded-xl bg-white dark:bg-gray-900">
+    <div class="mx-auto max-w-screen-xl px-4 py-8 text-center lg:py-16">
       <h1
-        class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white"
+        class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 dark:text-white md:text-5xl lg:text-6xl"
       >
         {{ title }}
       </h1>
       <p
         v-if="subtitle !== null"
-        class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 lg:px-48 dark:text-gray-400"
+        class="mb-8 text-lg font-normal text-gray-500 dark:text-gray-400 sm:px-16 lg:px-48 lg:text-xl"
       >
         {{ subtitle }}
       </p>
       <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0">
         <a
           href="#"
-          class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900"
+          class="inline-flex items-center justify-center rounded-lg bg-blue-700 px-5 py-3 text-center text-base font-medium text-white hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900"
         >
           Get started
           <svg
-            class="w-3.5 h-3.5 ms-2 rtl:rotate-180"
+            class="ms-2 h-3.5 w-3.5 rtl:rotate-180"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -36,7 +36,7 @@
         </a>
         <a
           href="#"
-          class="inline-flex justify-center items-center py-3 px-5 sm:ms-4 text-base font-medium text-center text-gray-900 rounded-lg border border-gray-300 hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800"
+          class="inline-flex items-center justify-center rounded-lg border border-gray-300 px-5 py-3 text-center text-base font-medium text-gray-900 hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-800 sm:ms-4"
         >
           Learn more
         </a>
