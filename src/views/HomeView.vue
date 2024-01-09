@@ -29,6 +29,7 @@
       />
     </div>
     <div class="grid grid-rows-6 gap-3 max-w-xl mb-3">
+      <button-group-component :items="buttonItems" />
       <alert-component text="Change a few things up and try submitting again." />
       <alert-component text="Change a few things up and try submitting again." color="info" />
       <alert-component text="Change a few things up and try submitting again." color="danger" />
@@ -104,6 +105,7 @@ import CardComponent from "../components/card/CardComponent.vue";
 import ButtonComponent from "../components/button/ButtonComponent.vue";
 import InputComponent from "../components/input/InputComponent.vue";
 import AlertComponent from "@/components/alert/AlertComponent.vue";
+import ButtonGroupComponent from "@/components/button/ButtonGroupComponent.vue";
 
 let isDarkMode: boolean = false;
 
@@ -114,4 +116,6 @@ function toggleUiMode(): void {
     htmlElement.classList.toggle("dark", isDarkMode);
   }
 }
+
+const buttonItems = ["hello", "world", "hello", "world", "hello", "world", "hello", "world"];
 </script>
