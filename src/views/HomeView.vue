@@ -70,13 +70,13 @@
     </div>
     <hr class="h-px my-3 bg-gray-200 border-0 dark:bg-gray-700" />
     <div class="flex-none flex-row space-x-3 grow-0">
-      <button-component text="transparent" color="transparent" size="xs" />
-      <button-component text="primary" color="primary" size="base" />
-      <button-component text="secondary" color="secondary" size="lg" />
-      <button-component text="success" color="success" size="xl" />
-      <button-component text="danger" color="danger" size="lg" />
-      <button-component text="warning" color="warning" size="base" />
-      <button-component text="info" color="info" size="xs" />
+      <button-component text="transparent" color="transparent" size="xs" @click="toggleUiMode" />
+      <button-component text="primary" color="primary" size="base" @click="toggleUiMode" />
+      <button-component text="secondary" color="secondary" size="lg" @click="toggleUiMode" />
+      <button-component text="success" color="success" size="xl" @click="toggleUiMode" />
+      <button-component text="danger" color="danger" size="lg" @click="toggleUiMode" />
+      <button-component text="warning" color="warning" size="base" @click="toggleUiMode" />
+      <button-component text="info" color="info" size="xs" @click="toggleUiMode" />
     </div>
     <!-- <hr class="h-px my-3 bg-gray-200 border-0 dark:bg-gray-700" />
     <div class="flex-none flex-row space-x-3 grow-0">
@@ -90,13 +90,55 @@
     </div> -->
     <hr class="h-px my-3 bg-gray-200 border-0 dark:bg-gray-700" />
     <div class="flex-none flex-row space-y-3 grow-0">
-      <button-component text="transparent" color="transparent" size="xs" :full-width="true" />
-      <button-component text="primary" color="primary" size="base" :full-width="true" />
-      <button-component text="secondary" color="secondary" size="lg" :full-width="true" />
-      <button-component text="success" color="success" size="xl" :full-width="true" />
-      <button-component text="danger" color="danger" size="lg" :full-width="true" />
-      <button-component text="warning" color="warning" size="base" :full-width="true" />
-      <button-component text="info" color="info" size="xs" :full-width="true" />
+      <button-component
+        text="transparent"
+        color="transparent"
+        size="xs"
+        :full-width="true"
+        @click="toggleUiMode"
+      />
+      <button-component
+        text="primary"
+        color="primary"
+        size="base"
+        :full-width="true"
+        @click="toggleUiMode"
+      />
+      <button-component
+        text="secondary"
+        color="secondary"
+        size="lg"
+        :full-width="true"
+        @click="toggleUiMode"
+      />
+      <button-component
+        text="success"
+        color="success"
+        size="xl"
+        :full-width="true"
+        @click="toggleUiMode"
+      />
+      <button-component
+        text="danger"
+        color="danger"
+        size="lg"
+        :full-width="true"
+        @click="toggleUiMode"
+      />
+      <button-component
+        text="warning"
+        color="warning"
+        size="base"
+        :full-width="true"
+        @click="toggleUiMode"
+      />
+      <button-component
+        text="info"
+        color="info"
+        size="xs"
+        :full-width="true"
+        @click="toggleUiMode"
+      />
     </div>
     <!-- <hr class="h-px my-3 bg-gray-200 border-0 dark:bg-gray-700" />
     <div class="flex-none flex-row space-y-3 grow-0">
