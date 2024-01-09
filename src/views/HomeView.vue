@@ -14,6 +14,20 @@
         >i am inside your walls</card-component
       >
     </div>
+    <div class="max-w-96 mb-3">
+      <input-component
+        type="text"
+        labelValue="field test"
+        placeholder="field test"
+        :requiredLabel="true"
+      />
+      <input-component
+        type="password"
+        labelValue="password field test"
+        placeholder="password field test"
+        :requiredLabel="true"
+      />
+    </div>
     <div class="flex-none flex-row grow-0 mb-3">
       <button-component text="transparent" color="transparent" size="xs" />
       <button-component text="primary" color="primary" size="base" />
@@ -25,45 +39,21 @@
     </div>
     <div class="flex-none flex-row grow-0 mb-3">
       <button-component icon="apple" text="transparent" color="transparent" size="xs" />
-      <button-component icon="apple" text="primary" color="primary" size="base" :rounded="true" />
-      <button-component icon="apple" text="secondary" color="secondary" size="lg" :rounded="true" />
-      <button-component icon="apple" text="success" color="success" size="xl" :rounded="true" />
-      <button-component icon="apple" text="danger" color="danger" size="lg" :rounded="true" />
-      <button-component icon="apple" text="warning" color="warning" size="base" :rounded="true" />
-      <button-component icon="apple" text="info" color="info" size="xs" :rounded="true" />
+      <button-component icon="apple" text="primary" color="primary" size="base" />
+      <button-component icon="apple" text="secondary" color="secondary" size="lg" />
+      <button-component icon="apple" text="success" color="success" size="xl" />
+      <button-component icon="apple" text="danger" color="danger" size="lg" />
+      <button-component icon="apple" text="warning" color="warning" size="base" />
+      <button-component icon="apple" text="info" color="info" size="xs" />
     </div>
     <div class="flex-none flex-row grow-0 mb-3">
       <button-component text="transparent" color="transparent" size="xs" :full-width="true" />
-      <button-component
-        text="primary"
-        color="primary"
-        size="base"
-        :full-width="true"
-        :rounded="true"
-      />
-      <button-component
-        text="secondary"
-        color="secondary"
-        size="lg"
-        :full-width="true"
-        :rounded="true"
-      />
-      <button-component
-        text="success"
-        color="success"
-        size="xl"
-        :full-width="true"
-        :rounded="true"
-      />
-      <button-component text="danger" color="danger" size="lg" :full-width="true" :rounded="true" />
-      <button-component
-        text="warning"
-        color="warning"
-        size="base"
-        :full-width="true"
-        :rounded="true"
-      />
-      <button-component text="info" color="info" size="xs" :full-width="true" :rounded="true" />
+      <button-component text="primary" color="primary" size="base" :full-width="true" />
+      <button-component text="secondary" color="secondary" size="lg" :full-width="true" />
+      <button-component text="success" color="success" size="xl" :full-width="true" />
+      <button-component text="danger" color="danger" size="lg" :full-width="true" />
+      <button-component text="warning" color="warning" size="base" :full-width="true" />
+      <button-component text="info" color="info" size="xs" :full-width="true" />
     </div>
     <div class="flex-none flex-row grow-0 mb-3">
       <button-component
@@ -104,6 +94,7 @@
 <script setup lang="ts">
 import CardComponent from "../components/card/CardComponent.vue";
 import ButtonComponent from "../components/button/ButtonComponent.vue";
+import InputComponent from "../components/input/InputComponent.vue";
 
 let isDarkMode: boolean = false;
 

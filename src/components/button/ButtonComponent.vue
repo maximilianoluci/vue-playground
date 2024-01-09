@@ -27,7 +27,6 @@ const props = defineProps<{
     | "dark"
     | "transparent";
   fullWidth?: boolean;
-  rounded?: boolean;
   icon?: string;
   size?: "xs" | "sm" | "base" | "lg" | "xl";
 }>();
@@ -39,10 +38,6 @@ const computedClass = computed(() => {
 
   if (props.fullWidth) {
     classes.push("w-full");
-  }
-
-  if (props.rounded) {
-    classes.push("rounded-full");
   }
 
   switch (props.color) {
