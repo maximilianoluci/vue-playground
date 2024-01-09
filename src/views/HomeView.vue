@@ -30,7 +30,12 @@
       <button-group-component class="mt-3" :items="buttonItems" />
     </div>
     <dropdown-component title="peepeepoopoo" :hideCaret="true" :items="dropdownItems" />
-    <div class="max-w-48 mt-3 mb-3"><checkbox-component text="1234567890" /></div>
+    <div class="max-w-xl mt-3 mb-3">
+      <checkbox-component
+        text="Free shipping"
+        subtitle="For orders shipped from $25 in books or $29 in other categories"
+      />
+    </div>
     <div class="grid grid-rows-6 gap-3 max-w-xl mb-3">
       <alert-component text="Change a few things up and try submitting again." icon="info-circle" />
       <alert-component text="Change a few things up and try submitting again." color="info" />
