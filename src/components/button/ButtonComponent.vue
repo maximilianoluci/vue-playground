@@ -149,7 +149,7 @@ const computedClass = computed(() => {
   return classes.join(" ").trim();
 });
 
-// const computedIconClass = computed(() => {
+//  const computedIconClass = computed(() => {
 //   const classes = ["inline"];
 
 //   switch (props.size) {
@@ -172,7 +172,7 @@ const computedClass = computed(() => {
 //   return classes.join(" ").trim();
 // });
 
-// function onClick() {
-//   emit("click");
-// }
+function onClick() {
+  emit("click");
+}
 </script>
