@@ -60,7 +60,8 @@
     </div>
     <hr class="h-px my-3 bg-gray-200 border-0 dark:bg-gray-700" />
     <div class="grid grid-rows-6 gap-3 max-w-xl">
-      <alert-component text="Change a few things up and try submitting again." icon="info-circle" />
+      <!-- <alert-component text="Change a few things up and try submitting again." icon="info-circle" /> -->
+      <alert-component text="Change a few things up and try submitting again." />
       <alert-component text="Change a few things up and try submitting again." color="info" />
       <alert-component text="Change a few things up and try submitting again." color="danger" />
       <alert-component text="Change a few things up and try submitting again." color="success" />
