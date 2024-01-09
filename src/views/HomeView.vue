@@ -117,8 +117,25 @@ import DropdownComponent from "@/components/dropdown/DropdownComponent.vue";
 import CheckboxComponent from "@/components/checkbox/CheckboxComponent.vue";
 
 let isDarkMode: boolean = false;
-let buttonItems = ["hello", "world", "this", "is", "a", "button", "group", "test"];
-let dropdownItems = ["hello", "world", "this", "is", "a", "dropdown", "test"];
+const buttonItems = [
+  { name: "hello", value: "hello" },
+  { name: "world", value: "world" },
+  { name: "this", value: "this" },
+  { name: "is", value: "is" },
+  { name: "an", value: "an" },
+  { name: "item", value: "item" },
+  { name: "group", value: "group" },
+  { name: "test", value: "test" },
+];
+const dropdownItems = [
+  { name: "hello", value: "hello" },
+  { name: "world", value: "world" },
+  { name: "this", value: "this" },
+  { name: "is", value: "is" },
+  { name: "a", value: "a" },
+  { name: "dropdown", value: "dropdown" },
+  { name: "test", value: "test" },
+];
 
 function toggleUiMode(): void {
   const htmlElement = document.querySelector("html");
