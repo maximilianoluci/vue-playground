@@ -28,6 +28,14 @@
         :requiredLabel="false"
       />
     </div>
+    <div class="grid grid-rows-6 gap-3 max-w-xl mb-3">
+      <alert-component text="Change a few things up and try submitting again." />
+      <alert-component text="Change a few things up and try submitting again." color="info" />
+      <alert-component text="Change a few things up and try submitting again." color="danger" />
+      <alert-component text="Change a few things up and try submitting again." color="success" />
+      <alert-component text="Change a few things up and try submitting again." color="warning" />
+      <alert-component text="Change a few things up and try submitting again." color="dark" />
+    </div>
     <div class="flex-none flex-row grow-0 mb-3">
       <button-component text="transparent" color="transparent" size="xs" />
       <button-component text="primary" color="primary" size="base" />
@@ -95,6 +103,7 @@
 import CardComponent from "../components/card/CardComponent.vue";
 import ButtonComponent from "../components/button/ButtonComponent.vue";
 import InputComponent from "../components/input/InputComponent.vue";
+import AlertComponent from "@/components/alert/AlertComponent.vue";
 
 let isDarkMode: boolean = false;
 
