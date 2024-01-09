@@ -29,7 +29,7 @@
       />
       <button-group-component class="mt-3" :items="buttonItems" />
     </div>
-    <dropdown-component title="peepeepoopoo" :hideCaret="true" :items="dropdownItems" />
+    <dropdown-component label="peepeepoopoo" :hideCaret="true" :items="dropdownItems" />
     <div class="max-w-xl mt-3 mb-3">
       <checkbox-component
         text="Free shipping"
