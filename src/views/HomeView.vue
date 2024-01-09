@@ -78,8 +78,8 @@
       <button-component text="warning" color="warning" size="base" />
       <button-component text="info" color="info" size="xs" />
     </div>
-    <hr class="h-px my-3 bg-gray-200 border-0 dark:bg-gray-700" />
-    <!-- <div class="flex-none flex-row space-x-3 grow-0">
+    <!-- <hr class="h-px my-3 bg-gray-200 border-0 dark:bg-gray-700" />
+    <div class="flex-none flex-row space-x-3 grow-0">
       <button-component icon="apple" text="transparent" color="transparent" size="xs" />
       <button-component icon="apple" text="primary" color="primary" size="base" />
       <button-component icon="apple" text="secondary" color="secondary" size="lg" />
@@ -98,8 +98,8 @@
       <button-component text="warning" color="warning" size="base" :full-width="true" />
       <button-component text="info" color="info" size="xs" :full-width="true" />
     </div>
-    <hr class="h-px my-3 bg-gray-200 border-0 dark:bg-gray-700" />
-    <!-- <div class="flex-none flex-row space-y-3 grow-0">
+    <!-- <hr class="h-px my-3 bg-gray-200 border-0 dark:bg-gray-700" />
+    <div class="flex-none flex-row space-y-3 grow-0">
       <button-component
         icon="apple"
         text="transparent"
