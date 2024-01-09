@@ -108,6 +108,7 @@ import AlertComponent from "@/components/alert/AlertComponent.vue";
 import ButtonGroupComponent from "@/components/button/ButtonGroupComponent.vue";
 
 let isDarkMode: boolean = false;
+let buttonItems = ["hello", "world", "hello", "world", "hello", "world", "hello", "world"];
 
 function toggleUiMode(): void {
   const htmlElement = document.querySelector("html");
@@ -116,6 +117,4 @@ function toggleUiMode(): void {
     htmlElement.classList.toggle("dark", isDarkMode);
   }
 }
-
-const buttonItems = ["hello", "world", "hello", "world", "hello", "world", "hello", "world"];
 </script>
