@@ -25,7 +25,7 @@
         type="password"
         labelValue="password field test"
         placeholder="password field test"
-        :requiredLabel="true"
+        :requiredLabel="false"
       />
     </div>
     <div class="flex-none flex-row grow-0 mb-3">
