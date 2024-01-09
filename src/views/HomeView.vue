@@ -49,6 +49,11 @@
       <dropdown-component id="dd2" label="peepeepoopoo" :items="dropdownItems" />
     </div>
     <hr class="h-px my-3 bg-gray-200 border-0 dark:bg-gray-700" />
+    <div class="flex-none flex-row space-x-3 grow-0">
+      <popover-component id="po1" title="0987654321" button-label="test" content="hello" />
+      <popover-component id="po2" title="1234567890" button-label="prueba" content="hola" />
+    </div>
+    <hr class="h-px my-3 bg-gray-200 border-0 dark:bg-gray-700" />
     <div class="flex-none flex-row space-y-3 grow-0">
       <checkbox-component id="cb1" text="text" />
       <checkbox-component id="cb2" text="text" subtitle="subtitle" />
@@ -73,7 +78,7 @@
       <button-component text="info" color="info" size="xs" />
     </div>
     <hr class="h-px my-3 bg-gray-200 border-0 dark:bg-gray-700" />
-    <div class="flex-none flex-row space-x-3 grow-0">
+    <!-- <div class="flex-none flex-row space-x-3 grow-0">
       <button-component icon="apple" text="transparent" color="transparent" size="xs" />
       <button-component icon="apple" text="primary" color="primary" size="base" />
       <button-component icon="apple" text="secondary" color="secondary" size="lg" />
@@ -81,7 +86,7 @@
       <button-component icon="apple" text="danger" color="danger" size="lg" />
       <button-component icon="apple" text="warning" color="warning" size="base" />
       <button-component icon="apple" text="info" color="info" size="xs" />
-    </div>
+    </div> -->
     <hr class="h-px my-3 bg-gray-200 border-0 dark:bg-gray-700" />
     <div class="flex-none flex-row space-y-3 grow-0">
       <button-component text="transparent" color="transparent" size="xs" :full-width="true" />
@@ -93,7 +98,7 @@
       <button-component text="info" color="info" size="xs" :full-width="true" />
     </div>
     <hr class="h-px my-3 bg-gray-200 border-0 dark:bg-gray-700" />
-    <div class="flex-none flex-row space-y-3 grow-0">
+    <!-- <div class="flex-none flex-row space-y-3 grow-0">
       <button-component
         icon="apple"
         text="transparent"
@@ -125,7 +130,7 @@
         :full-width="true"
       />
       <button-component icon="apple" text="info" color="info" size="xs" :full-width="true" />
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -139,6 +144,7 @@ import DropdownComponent from "@/components/dropdown/DropdownComponent.vue";
 import CheckboxComponent from "@/components/checkbox/CheckboxComponent.vue";
 import ModalComponent from "@/components/modal/ModalComponent.vue";
 import JumboComponent from "@/components/jumbotron/JumboComponent.vue";
+import PopoverComponent from "@/components/popover/PopoverComponent.vue";
 
 let isDarkMode: boolean = false;
 const buttonItems = [

@@ -6,7 +6,7 @@
     @click="onClick"
   >
     <div class="flex items-center justify-center">
-      <svg-icon v-if="icon" :name="icon" :class="computedIconClass" />
+      <!-- <svg-icon v-if="icon" :name="icon" :class="computedIconClass" /> -->
       <span v-if="text" :class="icon ? 'ml-3' : ''">{{ text }}</span>
     </div>
   </button>
@@ -14,7 +14,7 @@
 
 <script setup lang="ts">
 import { computed } from "vue";
-import SvgIcon from "@/components/svg/SvgIcon.vue";
+// import SvgIcon from "@/components/svg/SvgIcon.vue";
 
 const props = defineProps<{
   text: string;
@@ -149,30 +149,30 @@ const computedClass = computed(() => {
   return classes.join(" ").trim();
 });
 
-const computedIconClass = computed(() => {
-  const classes = ["inline"];
+// const computedIconClass = computed(() => {
+//   const classes = ["inline"];
 
-  switch (props.size) {
-    case "xs":
-    case "sm":
-      classes.push("w-3", "h-3");
-      break;
-    case "lg":
-      classes.push("w-5", "h-5");
-      break;
-    case "xl":
-      classes.push("w-6", "h-6");
-      break;
-    case "base":
-    default:
-      classes.push("w-4", "h-4");
-      break;
-  }
+//   switch (props.size) {
+//     case "xs":
+//     case "sm":
+//       classes.push("w-3", "h-3");
+//       break;
+//     case "lg":
+//       classes.push("w-5", "h-5");
+//       break;
+//     case "xl":
+//       classes.push("w-6", "h-6");
+//       break;
+//     case "base":
+//     default:
+//       classes.push("w-4", "h-4");
+//       break;
+//   }
 
-  return classes.join(" ").trim();
-});
+//   return classes.join(" ").trim();
+// });
 
-function onClick() {
-  emit("click");
-}
+// function onClick() {
+//   emit("click");
+// }
 </script>
