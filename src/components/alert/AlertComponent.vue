@@ -23,20 +23,25 @@ const computedClass = computed(() => {
 
   switch (props.color) {
     case "info":
-      classes.push("text-blue-800", "bg-blue-50", "dark:text-blue-300", "dark:bg-blue-900");
+      classes.push("text-blue-800", "bg-blue-100", "dark:text-blue-300", "dark:bg-blue-900");
       break;
     case "danger":
-      classes.push("text-red-800", "bg-red-50", "dark:text-red-300", "dark:bg-red-900");
+      classes.push("text-red-800", "bg-red-100", "dark:text-red-300", "dark:bg-red-900");
       break;
     case "success":
-      classes.push("text-green-800", "bg-green-50", "dark:text-green-300", "dark:bg-green-900");
+      classes.push("text-green-800", "bg-green-100", "dark:text-green-300", "dark:bg-green-900");
       break;
     case "warning":
-      classes.push("text-yellow-800", "bg-yellow-50", "dark:text-yellow-300", "dark:bg-yellow-900");
+      classes.push(
+        "text-yellow-800",
+        "bg-yellow-100",
+        "dark:text-yellow-300",
+        "dark:bg-yellow-900",
+      );
       break;
     case "dark":
     default:
-      classes.push("text-gray-800", "bg-gray-50", "dark:text-gray-300", "dark:bg-gray-900");
+      classes.push("text-gray-800", "bg-gray-100", "dark:text-gray-300", "dark:bg-gray-900");
       break;
   }
 
