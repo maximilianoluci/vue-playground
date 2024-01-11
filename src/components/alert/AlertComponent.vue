@@ -1,5 +1,5 @@
 <template>
-  <div class="rounded-lg p-4 text-sm" :class="computedClass" role="alert">
+  <div :data-testid="dataTestId" class="rounded-lg p-4 text-sm" :class="computedClass" role="alert">
     <span class="font-medium">{{ color ? initcap(color) : "Default" }} alert!</span>
     {{ text }}
   </div>
@@ -9,6 +9,7 @@
 import { computed } from "vue";
 
 const props = defineProps<{
+  dataTestId?: string;
   text: string;
   color?: "info" | "danger" | "success" | "warning" | "dark";
 }>();

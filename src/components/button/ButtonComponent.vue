@@ -1,6 +1,6 @@
 <template>
   <button
-    :dataTestId="dataTestId"
+    :data-testId="dataTestId"
     type="button"
     class="rounded-lg text-center font-medium focus:ring-1"
     :class="computedClass"
@@ -18,15 +18,7 @@ import { computed } from "vue";
 const props = defineProps<{
   dataTestId?: string;
   text: string;
-  color?:
-    | "primary"
-    | "secondary"
-    | "success"
-    | "danger"
-    | "warning"
-    | "info"
-    | "dark"
-    | "transparent";
+  color?: "primary" | "secondary" | "success" | "danger" | "warning" | "info" | "transparent";
   fullWidth?: boolean;
   icon?: string;
   size?: "xs" | "sm" | "base" | "lg" | "xl";
@@ -108,19 +100,6 @@ const computedClass = computed(() => {
         "dark:bg-cyan-600",
         "dark:hover:bg-cyan-700",
         "dark:focus:ring-cyan-800",
-      );
-      break;
-    case "dark":
-      classes.push(
-        "text-white",
-        "bg-gray-500",
-        "hover:bg-gray-800",
-        "focus:ring-gray-300",
-        "dark:text-black",
-        "dark:bg-white",
-        "dark:hover:bg-gray-200",
-        "dark:focus:ring-1",
-        "dark:focus:ring-gray-200",
       );
       break;
     case "transparent":

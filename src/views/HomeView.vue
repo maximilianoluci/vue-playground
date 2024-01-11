@@ -3,7 +3,7 @@
     <div class="flex justify-center">
       <button-component
         text="Toggle Dark/Light Mode"
-        color="dark"
+        color="secondary"
         :full-width="true"
         @click="toggleUiMode"
       />
