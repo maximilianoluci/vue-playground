@@ -1,5 +1,6 @@
 <template>
   <div
+    :dataTestId="dataTestId"
     class="flex items-center rounded border border-gray-300 bg-gray-200 p-4 dark:border-gray-900 dark:bg-gray-800"
   >
     <div class="flex h-5 items-center">
@@ -28,6 +29,7 @@
 import { computed } from "vue";
 
 const props = defineProps<{
+  dataTestId?: string;
   id?: string;
   text: string;
   subtitle?: string;

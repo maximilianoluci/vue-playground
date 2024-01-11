@@ -1,20 +1,15 @@
 <template>
   <div class="rounded-lg p-4 text-sm" :class="computedClass" role="alert">
-    <!-- <svg-icon v-if="icon" :name="icon" /> -->
-    <span :class="icon ? 'ml-3' : ''" class="font-medium"
-      >{{ color ? initcap(color) : "Default" }} alert!</span
-    >
+    <span class="font-medium">{{ color ? initcap(color) : "Default" }} alert!</span>
     {{ text }}
   </div>
 </template>
 
 <script setup lang="ts">
 import { computed } from "vue";
-// import SvgIcon from "@/components/svg/SvgIcon.vue";
 
 const props = defineProps<{
   text: string;
-  icon?: string;
   color?: "info" | "danger" | "success" | "warning" | "dark";
 }>();
 

@@ -1,5 +1,5 @@
 <template>
-  <section class="rounded-xl bg-white dark:bg-gray-900">
+  <section :dataTestId="dataTestId" class="rounded-xl bg-white dark:bg-gray-900">
     <div class="mx-auto max-w-screen-xl px-4 py-8 text-center lg:py-16">
       <h1
         class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 dark:text-white md:text-5xl lg:text-6xl"
@@ -47,6 +47,7 @@
 
 <script setup lang="ts">
 defineProps<{
+  dataTestId?: string;
   title: string;
   subtitle?: string;
 }>();

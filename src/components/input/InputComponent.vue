@@ -1,5 +1,5 @@
 <template>
-  <label class="block text-sm font-medium text-gray-900 dark:text-white"
+  <label :dataTestId="dataTestId" class="block text-sm font-medium text-gray-900 dark:text-white"
     >{{ labelValue }} {{ requiredLabel ? "*" : "" }}</label
   >
   <input
@@ -11,6 +11,7 @@
 
 <script setup lang="ts">
 /*const props = */ defineProps<{
+  dataTestId?: string;
   type: "text" | "password" | "email";
   labelValue?: string;
   placeholder?: string;

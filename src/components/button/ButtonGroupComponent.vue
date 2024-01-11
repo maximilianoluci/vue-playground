@@ -1,5 +1,5 @@
 <template>
-  <div class="inline-flex rounded-md shadow-sm">
+  <div :dataTestId="dataTestId" class="inline-flex rounded-md shadow-sm">
     <button
       v-for="item in items"
       :key="item.value"
@@ -13,6 +13,7 @@
 
 <script setup lang="ts">
 defineProps<{
+  dataTestId?: string;
   items: { name: string; value: string }[];
 }>();
 </script>
