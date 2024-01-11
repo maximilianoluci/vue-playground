@@ -1,9 +1,10 @@
 <template>
   <button
-    :dataTestId="dataTestId"
+    :data-testid="dataTestId"
     :id="buttonId"
     :data-dropdown-toggle="menuId"
     class="inline-flex items-center rounded-lg bg-blue-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-1 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+    :class="computedClass"
     type="button"
   >
     {{ label }}
@@ -43,13 +44,14 @@
 <script setup lang="ts">
 import { Dropdown } from "flowbite";
 import type { DropdownOptions, DropdownInterface, InstanceOptions } from "flowbite";
-import { computed } from "vue";
+import { computed, onMounted } from "vue";
 
 const props = defineProps<{
   dataTestId?: string;
   id?: string;
   label?: string;
   items: { name: string; value: string }[];
+  fullWidth?: boolean;
   hideCaret?: boolean;
 }>();
 
@@ -57,17 +59,23 @@ let dropdown: DropdownInterface;
 
 const emit = defineEmits(["item:selected"]);
 
+const dataTestId = computed<string>(() => `${props.id}`);
 const menuId = computed<string>(() => `${props.id}-menu`);
 const buttonId = computed<string>(() => `${props.id}-button`);
 
-document.addEventListener("DOMContentLoaded", function () {
-  // set the dropdown menu element
+const computedClass = computed(() => {
+  const classes = [];
+
+  props.fullWidth && classes.push("w-full");
+
+  return classes.join(" ").trim();
+});
+
+onMounted(() => {
   const $targetEl: HTMLElement | null = document.getElementById(menuId.value);
 
-  // set the element that triggers the dropdown menu on click
   const $triggerEl: HTMLElement | null = document.getElementById(buttonId.value);
 
-  // options with default values
   const options: DropdownOptions = {
     placement: "bottom",
     triggerType: "click",
@@ -76,7 +84,6 @@ document.addEventListener("DOMContentLoaded", function () {
     delay: 300,
   };
 
-  // instance options object
   const instanceOptions: InstanceOptions = {
     id: menuId.value,
     override: true,
@@ -84,6 +91,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   dropdown = new Dropdown($targetEl, $triggerEl, options, instanceOptions);
 });
+
 function hideDropdown() {
   dropdown.hide();
 }

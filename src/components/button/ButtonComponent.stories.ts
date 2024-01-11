@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/vue3";
 
 import ButtonComponent from "@/components/button/ButtonComponent.vue";
-import { within, expect } from "@storybook/test";
+import { within, expect, userEvent } from "@storybook/test";
 
 const meta: Meta<typeof ButtonComponent> = {
   component: ButtonComponent,
@@ -127,5 +127,47 @@ export const Transparent: Story = {
   play: async ({ canvasElement }: any) => {
     const canvas = within(canvasElement);
     canvas.getByTestId("button-transparent");
+  },
+};
+
+export const FullWidth: Story = {
+  args: {
+    dataTestId: "button-primary",
+    color: "primary",
+    text: "Full Width Primary Button",
+    fullWidth: true,
+  },
+  play: async ({ canvasElement }: any) => {
+    const canvas = within(canvasElement);
+    const alertObj = canvas.getByTestId("button-primary");
+
+    expect(alertObj).toHaveStyle("background-color: #3b82f6");
+  },
+};
+
+let eventFromButton: boolean = false;
+export const EmitsClickEvent: Story = {
+  render: (args: any) => ({
+    components: { ButtonComponent },
+    setup() {
+      return { args };
+    },
+    template: '<button-component v-bind="args" @click="clickedLog" />',
+    methods: {
+      clickedLog: () => (eventFromButton = true),
+    },
+  }),
+  args: {
+    dataTestId: "button-click",
+    text: "Primary Button",
+    color: "primary",
+  },
+  play: async ({ canvasElement }: any) => {
+    const canvas = within(canvasElement);
+    const button = canvas.getByTestId("button-click");
+
+    await userEvent.click(button);
+
+    expect(eventFromButton).toBe(true);
   },
 };

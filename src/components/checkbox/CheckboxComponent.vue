@@ -1,6 +1,6 @@
 <template>
   <div
-    :dataTestId="dataTestId"
+    :data-testId="dataTestId"
     class="flex items-center rounded border border-gray-300 bg-gray-200 p-4 dark:border-gray-900 dark:bg-gray-800"
   >
     <div class="flex h-5 items-center">
@@ -13,7 +13,12 @@
       />
     </div>
     <div class="ms-2 text-sm">
-      <label :for="boxId" class="font-medium text-gray-900 dark:text-gray-300">{{ text }}</label>
+      <label
+        v-if="text !== null"
+        :for="boxId"
+        class="font-medium text-gray-900 dark:text-gray-300"
+        >{{ text }}</label
+      >
       <p
         v-if="subtitle !== null"
         :id="helperId"
@@ -31,7 +36,7 @@ import { computed } from "vue";
 const props = defineProps<{
   dataTestId?: string;
   id?: string;
-  text: string;
+  text?: string;
   subtitle?: string;
 }>();
 

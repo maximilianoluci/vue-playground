@@ -1,13 +1,13 @@
 <template>
   <button
-    :data-testId="dataTestId"
+    :data-testid="dataTestId"
     type="button"
     class="rounded-lg text-center font-medium focus:ring-1"
     :class="computedClass"
     @click="onClick"
   >
     <div class="flex items-center justify-center">
-      <span v-if="text" :class="icon ? 'ml-3' : ''">{{ text }}</span>
+      <span v-if="text">{{ text }}</span>
     </div>
   </button>
 </template>
@@ -20,7 +20,6 @@ const props = defineProps<{
   text: string;
   color?: "primary" | "secondary" | "success" | "danger" | "warning" | "info" | "transparent";
   fullWidth?: boolean;
-  icon?: string;
   size?: "xs" | "sm" | "base" | "lg" | "xl";
 }>();
 
